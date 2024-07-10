@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link rel="stylesheet" href = "css/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="device-width, initial-scale=1.0">
+        <title>Registro de usuario</title>
+    </head>
+    <body>
+        <h1>Crea tu cuenta</h1>
+        <form action="/submit_registration" method="POST">
+            <div>
+                <label for="nombre-apellido">Nombre y Apellido</label>
+                <input type="text" name="nombre-apellido" id="nombre-apellido" required>
+                <span class="error" id="name-error"></span>
+
+            </div>
+            <div>
+                <label for="username">Nombre de usuari@</label>
+                <input type="text" name="username" id="username" required>
+            <span class="error" id="email-error"></span>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <span class="error" id="email-error"></span>
+            </div>
+                <label for="Fecha de nacimiento">Fecha de nacimiento</label>
+                <input type="date" name="Fecha de nacimiento" id="Fecha de nacimiento" required>
+                <span class="error" id="email-error"></span>
+            </div>
+            <div>
+                <label for="domicilio">Domicilio</label>
+                <input type="domicilio" name="domicilio" id="domicilio" required>
+                <span class="error" id="email-error"></span>
+            </div>
+            <div>            
+                <label for="Perfil del usuario">Perfil del usuario</label>
+                <input type="radio" id="comprar" name="profile" value="comprar" required>
+                <span class="error" id="email-error"></span>
+            </div>
+            <div>
+                <label for="comprar">Comprar</label>
+                <input type="radio" id="vender" name="profile" value="vender" required>
+                <label for="vender">Vender</label>
+                <span class="error" id="email-error"></span>
+            </div>
+            <div>    
+            <label>Categorías de interés(puedes elegir más de una)</label>
+ 
+                <input type="radio" name="categorías" value="Electro" required>
+                <label for="Electro">Electro</label><br>
+
+                <input type="radio" name="categorías" value="Moda">
+                <label for="Moda">Moda</label><br>
+
+                <input type="radio" name="categorías" value="Hogar">
+                <label for="Hogar">Hogar</label><br>
+                
+                <input type="radio" name="categorías" value="Juguetería">
+                <label for="Juguetería">Juguetería</label><br>
+                
+                <input type="radio" name="categorías" value="Vida sana" checked>
+                <label for="Vida sana">Vida sana</label><br>
+              
+            </div>    
+            <label for="fotoUsuario">Foto de Usuario:</label>
+            <input type="file" id="fotoUsuario" name="fotoUsuario">
+            <span class="error" id="email-error"></span>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            <span class="error" id="email-error"></span>
+            <label for="confirmPassword">Confirmar Contraseña:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <span class="error" id="email-error"></span>
+            <button type="submit">Enviar</button>
+            <button type="reset">Borrar Todos los Datos</button>
+        
+        </form>
+    </body>
+</html>
