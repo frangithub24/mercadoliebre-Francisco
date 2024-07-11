@@ -328,31 +328,70 @@ footer p i {
     .nav,
     .article {
         display:flex;
+        flex-direction:column;
+        align-items:center;
+        color:red;
     }
     .nav ul,
     .login-bar ul {
-        display:flex;
-        flex-direction: row;
+        align-items: center;
+        flex-direction: column;
     }
     .nav-login {
-        display:flex;
-        flex-direction: row;
-        gap:25px;
+        flex-direction: column;
+        gap:10px;
+        align-items:center;
     }
     .logobarra-cuotas {
-        display:flex;
-        flex-direction:row;
-        gap:40px;
+        flex-direction:column;
+        gap:10px;
+        align-items:center;
+        color:red;
     }
     .tarjeta-envio-seguridad {
         display:flex;
-        flex-direction:row;
+        flex-direction:column;
+        gap:10px;
+        align-items:center
+    }
+    .burger-menu {
+        display:flex;
+        align-items:center;
+        font-size:30px;
+        background-color:blue;
+        color: #ebebeb;
+        padding:10 px 20px;
+        border-radius: 7px;
+    }
+
+    .articles-container {
+        flex-direction:column;
+    }
+    .article {
+        width: 100%; /* Artículos ocupan todo el ancho en móviles */
+    }
+    .search-bar {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar input[type="text"] {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .search-bar button {
+        width: 100%;
     }
 }
 @media (min-width:361px){
     body {
         box-shadow:0px 0px 10px rgb(100,100,100);
     }
+
+    
 }
 @media (min-width:769px) { /*tables y netbooks*/
     .burger-menu {
