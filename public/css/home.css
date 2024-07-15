@@ -14,26 +14,32 @@ body {
 }
 
 main {
-    padding:20px;
-    width:90%;
-    max-width:1200px;
+    padding:10px;
+    width:100%;
+    max-width:1400px;
     margin:0 auto;
-    background-color:lightgray;
+    background-color:whitesmoke;
 }
 header {
     background-color: #EAC926;
     color: black;
-    padding: 10px 20px;
-    text-align: center;
+    padding: 10px 20px; 
+    width:100%;
 }
 
+
+.publicidad {
+    width: 100%;
+    height: auto;
+    display:block;
+    max-height:500px;
+    object-fit:cover;
+}
 .contenedor-general {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    gap:10px;
 }
-
-
 nav {
     display: flex;
     flex-direction: column;
@@ -58,25 +64,24 @@ nav ul {
 nav ul li {
     margin: 0 10px;
     text-decoration:none;
+    font-size:14px;
 }
 
 a {
     text-decoration:none;
+    font-siez:14px;
 }
 .logo {
-    display:flex;
     max-width: 50%;
     height:auto;
 }
+
 .login-bar {
     display: flex;
     justify-content: flex-end;  
-    font-size:12px;
+    font-size:14px;
+    text-align:right;
 }
-.login-bar:hover{
-    background-color:white;
-}
-
 
 .login-bar ul {
     display: flex;
@@ -104,22 +109,17 @@ a {
      
 }
 .search-bar {
-    width:50%;
     display:flex;
-    flex-direction:row;
-    justify-content: flex-start;
     align-items: flex-start;
-    padding: 10px;
-    background-color: #EAC926;
-    gap:1px;
+    width:100%;
 }
-
 .search-bar input[type="text"] {
     padding: 5px;
     font-size: 14px;
     border: none;
     border-radius: 5px;
     margin-right: 10px;
+    width:350px;
 }
 
 .search-bar button {
@@ -137,12 +137,22 @@ a {
     gap:10px;
     margin-left:70px;
     padding:10px;
+    
+}
+
+.logobarra-cuotas, .nav-login {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
 }
 
 .logo-barra {
     display:flex;
-    flex-direction:row;
-}
+    align-items:center;
+    gap:20px;
+    flex:1;
+}    
 a {
     color:black;
 }
@@ -273,7 +283,7 @@ h4 {
 
 
 .icon {
-    font-size: 24px;
+   font-size: 24px;
     color: white;
 }
 
@@ -323,6 +333,29 @@ footer p i {
 }
 /*al menos 381, o sea de ahí para arriba la considero tablet. Por defecto menos a eso es celu */
 @media (max-width:768px) { /*dispositivos móviles*/
+    body {
+        font-family: 'Roboto', sans-serif;
+        font-size:16px;
+        margin: 0;
+        padding: 0;
+        background-color:#EAC926 !important;
+        
+    }
+    
+    main {
+        padding:10px;
+        width:100%;
+        max-width:1400px;
+        margin:0 auto;
+        background-color:whitesmoke;
+    }
+    
+    header {
+        background-color: #EAC926;
+        color: black;
+        padding: 10px 20px; 
+        width:100%;
+    }
     .login-bar,
     .nav,
     .article {
@@ -330,12 +363,19 @@ footer p i {
         flex-direction:column;
         align-items:center;
     }
+    .logo {
+        max-width: 50%;
+        height:auto;
+    }
     .nav ul,
     .login-bar ul {
         align-items: center;
         flex-direction: column;
+        display:flex;
+        padding:0px;
     }
     .nav-login {
+        display:flex;
         flex-direction: column;
         gap:10px;
         align-items:center;
@@ -344,7 +384,8 @@ footer p i {
         flex-direction:column;
         gap:10px;
         align-items:center;
-        color:red;
+        color:black;
+        display:flex;
     }
     .tarjeta-envio-seguridad {
         display:flex;
@@ -360,40 +401,51 @@ footer p i {
         color: #ebebeb;
         padding:10 px 20px;
         border-radius: 7px;
+        width:11%;
+        align-items:center;
+    }
+
+    .banner {
+        max-height:300px;
+        overflow:hidden;
     }
 
     .articles-container {
         flex-direction:column;
+        display:flex;
     }
     .article {
         width: 100%; /* Artículos ocupan todo el ancho en móviles */
+        margin-bottom:20px;
     }
     .search-bar {
         width: 100%;
-        flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        display:flex;
     }
-    .main {
-        padding: 20px;
-        width: 90%;
-        max-width: 1200px;
-        margin: 0 auto;
-        background-color: lightgray;
-    }    
+        
     .search-bar input[type="text"] {
-        margin-right: 0;
+        margin-right: 10px;
         margin-bottom: 10px;
         width: 100%;
-    }
-    .contenedor-cuotas {
-        color:black;
+        padding:5px;
+        font-size:14px;
+        width:250px;
+        border:none;
+        border-radius:5px;
+
     }
     
-
     .search-bar button {
-        width: 100%;
+        background-color:white;
+        color:black;
+        border:none;
+        padding:5px 10px;
+        border radius:5px;
+        cursor:pointer;
+
     }
-}
+    
 @media (min-width:361px){
     body {
         box-shadow:0px 0px 10px rgb(100,100,100);
@@ -401,8 +453,10 @@ footer p i {
 
     
 }
+}
+/*
 @media (min-width:769px) { /*tables y netbooks*/
-    .burger-menu {
+ /*   .burger-menu {
         display:none;
     }
     .login-bar,
@@ -433,7 +487,7 @@ footer p i {
         color: blue;
     }
     footer .icono:hover {
-        color: red;
+        color: gren;
     }
 }
 /*    body {
