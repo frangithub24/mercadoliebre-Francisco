@@ -10,7 +10,7 @@ body {
     margin: 0;
     padding: 0;
     background-color:#EAC926 !important;
-    
+    width:100%;
 }
 
 main {
@@ -19,6 +19,7 @@ main {
     max-width:1400px;
     margin:0 auto;
     background-color:whitesmoke;
+    width:100%;
 }
 header {
     background-color: #EAC926;
@@ -26,7 +27,6 @@ header {
     padding: 10px 20px; 
     width:100%;
 }
-
 
 .publicidad {
     width: 100%;
@@ -42,7 +42,7 @@ header {
 }
 nav {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color:#EAC926;
@@ -52,7 +52,7 @@ nav {
 
 nav ul {
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -64,7 +64,7 @@ nav ul {
 nav ul li {
     margin: 0 10px;
     text-decoration:none;
-    font-size:14px;
+    font-size:12px;
 }
 
 a {
@@ -89,6 +89,7 @@ a {
     margin: 0;
     padding: 0;
     align-items:flex-start;
+    flex-direction:row;
 
 }
 
@@ -111,7 +112,7 @@ a {
 .search-bar {
     display:flex;
     align-items: flex-start;
-    width:100%;
+    width:30%;
 }
 .search-bar input[type="text"] {
     padding: 5px;
@@ -134,17 +135,20 @@ a {
 .contenedor-cuotas {
     display:flex;
     align-items:center;
-    gap:10px;
-    margin-left:70px;
+    gap:5px;
     padding:10px;
-    
+    position:relative;
+    left:-100px;    
 }
 
-.logobarra-cuotas, .nav-login {
+.logobarra-cuotas, 
+.nav-login {
     display:flex;
     justify-content:space-between;
     align-items:center;
     width:100%;
+    flex-direction:row;
+    
 }
 
 .logo-barra {
@@ -190,7 +194,7 @@ article {
 }
 
 .burger-menu {
-    display:flex;
+    display:none;
     align-items:center;
     margin-left:40%;
     font-size:30px;
@@ -277,7 +281,7 @@ h3 {
 
 
 h4 {
-    font-size: 16px;
+    font-size: 12px;
 }
 
 
@@ -333,12 +337,18 @@ footer p i {
 }
 /*al menos 381, o sea de ahí para arriba la considero tablet. Por defecto menos a eso es celu */
 @media (max-width:768px) { /*dispositivos móviles*/
+    *{
+        box-sizing:border-box;
+        padding:0px;
+        margin:0px;
+    }
     body {
         font-family: 'Roboto', sans-serif;
         font-size:16px;
         margin: 0;
         padding: 0;
         background-color:#EAC926 !important;
+        width:100%;
         
     }
     
@@ -356,6 +366,17 @@ footer p i {
         padding: 10px 20px; 
         width:100%;
     }
+    .contenedor-general {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+    .contenedor-cuotas {
+        display:flex;
+        align-items:flex-end;
+        justify-content:flex-end;
+        width:100%;
+    }
     .login-bar,
     .nav,
     .article {
@@ -366,6 +387,7 @@ footer p i {
     .logo {
         max-width: 50%;
         height:auto;
+        margin-left:-90px;
     }
     .nav ul,
     .login-bar ul {
@@ -380,6 +402,11 @@ footer p i {
         gap:10px;
         align-items:center;
     }
+    .nav,
+    .login-bar {
+        display:none;
+    }
+    
     .logobarra-cuotas {
         flex-direction:column;
         gap:10px;
@@ -401,8 +428,8 @@ footer p i {
         color: #ebebeb;
         padding:10 px 20px;
         border-radius: 7px;
-        width:11%;
-        align-items:center;
+        width:13%;
+        justify-content:center;
     }
 
     .banner {
@@ -411,17 +438,37 @@ footer p i {
     }
 
     .articles-container {
-        flex-direction:column;
-        display:flex;
+        display:grid;
+        grid-template-columns:repeat(4, 1fr);
+        gap:10px;
+        height:200px;
+        width:400px;
     }
     .article {
         width: 100%; /* Artículos ocupan todo el ancho en móviles */
         margin-bottom:20px;
+        flex 1 1 calc(25%-20px);
+    }
+    .product-image {
+        height:90px;
+    }
+    .product-desc-box > .delivery-icon {
+        font-size:14px;
+    }
+    .price {
+        font-size:0.9em;
+    }
+    .description {
+        font-size:0.9em;
+    }
+    .discount {
+        font-size:0.9em;
     }
     .search-bar {
         width: 100%;
         align-items: flex-start;
         display:flex;
+        height:20px;
     }
         
     .search-bar input[type="text"] {
@@ -449,7 +496,14 @@ footer p i {
 @media (min-width:361px){
     body {
         box-shadow:0px 0px 10px rgb(100,100,100);
-    }
+        width:100%;
+    }    
+*{
+    box-sizing:border-box;
+    padding:0px;        
+    margin:0px;
+}
+    
 
     
 }
