@@ -442,12 +442,11 @@ footer p i {
         grid-template-columns:repeat(4, 1fr);
         gap:10px;
         height:200px;
-        width:400px;
+        width:100%;
     }
     .article {
         width: 100%; /* Artículos ocupan todo el ancho en móviles */
         margin-bottom:20px;
-        flex 1 1 calc(25%-20px);
     }
     .product-image {
         height:90px;
@@ -455,14 +454,35 @@ footer p i {
     .product-desc-box > .delivery-icon {
         font-size:14px;
     }
+
     .price {
         font-size:0.9em;
+        margin:0px;
+        text-align:center;
+        position:relative;
+        left:13px;
     }
     .description {
-        font-size:0.9em;
+        font-size:8px;
+        display:flex;
+        position:relative;
+        left:13px;
+    }
+    .description.long-description {
+        left:10px;
+        position:relative;
+        text-align:center;
+        font-size:8px;
+    }
+
     }
     .discount {
-        font-size:0.9em;
+        font-size:0.7em;
+        margin:0px;
+        text-align:center;
+    }
+    discount span {
+        display:block;
     }
     .search-bar {
         width: 100%;
@@ -492,7 +512,12 @@ footer p i {
         cursor:pointer;
 
     }
-    
+    .tarjeta-envio-seguridad{
+        font-size:12px;
+    }
+    .b,strong{
+        font-size:12px;
+    }
 @media (min-width:361px){
     body {
         box-shadow:0px 0px 10px rgb(100,100,100);
