@@ -366,6 +366,7 @@ footer p i {
         padding: 10px 20px; 
         width:100%;
     }
+
     .contenedor-general {
         display:flex;
         flex-direction:column;
@@ -423,12 +424,12 @@ footer p i {
     .burger-menu {
         display:flex;
         align-items:center;
-        font-size:30px;
+        font-size:13px;
         background-color:blue;
         color: #ebebeb;
         padding:10 px 20px;
         border-radius: 7px;
-        width:13%;
+        width:9%;
         justify-content:center;
     }
 
@@ -436,48 +437,65 @@ footer p i {
         max-height:300px;
         overflow:hidden;
     }
-
+    h3{
+        font-size:14px;
+    }
     .articles-container {
         display:grid;
-        grid-template-columns:repeat(4, 1fr);
+        grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
         gap:10px;
-        height:200px;
         width:100%;
+        margin-bottom:-100px;
     }
     .article {
-        width: 100%; /* Artículos ocupan todo el ancho en móviles */
-        margin-bottom:20px;
+        background-color:#fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align:center;
+        width:87%;
+        height:60%;
     }
     .product-image {
         height:90px;
+        object-fit:cover;
     }
     .product-desc-box > .delivery-icon {
         font-size:14px;
     }
-
+    .precio-descuento {
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        position:relative;
+        gap:6px;
+        text-align:left;
+    }
     .price {
         font-size:0.9em;
         margin:0px;
-        text-align:center;
+        text-align:left;
         position:relative;
         left:13px;
     }
     .description {
-        font-size:8px;
+        font-size:0.9em;
         display:flex;
         position:relative;
         left:13px;
+        text-align:left;
     }
     .description.long-description {
         left:10px;
         position:relative;
-        text-align:center;
-        font-size:8px;
+        text-align:left;
+        font-size:0.9em;
     }
 
     }
     .discount {
-        font-size:0.7em;
+        font-size:0.9em;
         margin:0px;
         text-align:center;
     }
